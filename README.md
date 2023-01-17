@@ -1,10 +1,3 @@
-TODO:
-  - Delete .gitignore.
-  - Add this line to Gemfile:
-  ```gem 'rubocop', '>= 1.0', '< 2.0'``` and run ```bundle install```
-  - Add node_modules to .gitignore of the ror project
-  - Modify the README.md file to match your project and remove sections that don't apply.
-  - Finally, remove line 1-8.
 
 <a name="readme-top"></a>
 
