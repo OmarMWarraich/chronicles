@@ -1,10 +1,3 @@
-TODO:
-  - Delete .gitignore.
-  - Add this line to Gemfile:
-  ```gem 'rubocop', '>= 1.0', '< 2.0'``` and run ```bundle install```
-  - Add node_modules to .gitignore of the ror project
-  - Modify the README.md file to match your project and remove sections that don't apply.
-  - Finally, remove line 1-8.
 
 <a name="readme-top"></a>
 
@@ -65,11 +58,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Chronicles] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Chronicles]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -80,14 +73,14 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Embedded Ruby</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
   </ul>
 </details>
 
@@ -116,7 +109,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- Coming Soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
