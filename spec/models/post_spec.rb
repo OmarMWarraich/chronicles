@@ -41,5 +41,4 @@ RSpec.describe Post, type: :model do
   it 'should have a valid title' do
     expect(post.valid?).to eq(true)
   end
-
 end
