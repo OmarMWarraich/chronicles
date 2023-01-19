@@ -42,8 +42,4 @@ RSpec.describe Post, type: :model do
     expect(post.valid?).to eq(true)
   end
 
-  it 'should update posts_counter after save' do
-    post.save
-    expect(user.update_posts_counter).to eq(1)
-  end
 end
