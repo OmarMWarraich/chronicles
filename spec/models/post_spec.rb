@@ -37,4 +37,12 @@ RSpec.describe Post, type: :model do
   it 'should have a recent_five_comments' do
     expect(post.recent_five_comments).to eq([])
   end
+
+  it 'should have a valid title' do
+    expect(post.valid?).to eq(true)
+  end
+
+  it 'should update posts_counter after save' do
+    expect(user.posts_counter).to eq(1)
+  end
 end
