@@ -48,9 +48,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_19_135600) do
     t.string "name"
     t.text "photo"
     t.string "bio"
+    t.bigint "posts_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "posts_counter", default: 0
   end
 
   add_foreign_key "comments", "posts"
