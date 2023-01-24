@@ -1,0 +1,20 @@
+<div>
+  <section>
+    <div>User Image</div>
+    <div>
+      <h1><a><%= @user.name%></a></h1>
+      <span>Number of posts:<%= @user.posts_counter%></span>
+    </div>
+  </section>
+
+  <section>
+   <ul>
+     <% @posts.each do |post| %>
+       <li>
+         <h3>Post <%='#'%><%= post.id %></h3>
+       </li>
+     <% end %>
+   </ul>
+   <a>Pagination</a>
+  </section>
+</div>
