@@ -17,7 +17,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -38,10 +38,10 @@ body {
   margin: 0 auto;
 }
 
-#container_items ul{
-   list-style-type: none;
-   padding: 1rem;
-   margin: 0.5rem;
+#container_items ul {
+  list-style-type: none;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
 #container_link {
@@ -93,63 +93,63 @@ body {
 }
 
 #container_bio {
-   text-align: left;
-   margin: 0.5rem;
-   padding: 0.5rem;
-   border: 2px solid black;
+  text-align: left;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
 }
 
 #container_bio h2 {
-   font-size: 1.5em;
-   font-weight: bold;
-   text-decoration: none;
-   padding: 0.5rem;
-   margin: 0.5rem;
-   border: 2px solid black;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
 }
 
 #container_bio p {
-   font-size: 1em;
-   font-weight: normal;
-   text-decoration: none;
-   padding: 0.5rem;
-   margin: 0.5rem;
-   border: 2px solid black;
+  font-size: 1em;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
 }
 
 #container_post {
-   text-align: center;
-   margin: 0.5rem;
-   padding: 0.5rem;
-   border: 2px solid black;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
 }
 
 #container_post ul {
-   list-style-type: none;
-   padding: 0.5rem;
-   margin: 0.5rem;
-   border: 2px solid black;
+  list-style-type: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
 }
 
 #container_post ul li {
-   margin:  0.5rem;
-   padding: 0.5rem;
-   border: 2px solid black;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
 }
 
 #container_post ul li h3 {
-   text-align: left;
+  text-align: left;
 }
 
 #container_post ul li p {
-   text-align: left;
-   display: -webkit-box;
+  text-align: left;
+  display: -webkit-box;
   -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-#container_post ul li div  {
-   display: flex;
-   justify-content: flex-end;
+#container_post ul li div {
+  display: flex;
+  justify-content: flex-end;
 }
