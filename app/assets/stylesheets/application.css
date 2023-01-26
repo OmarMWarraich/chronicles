@@ -13,3 +13,143 @@
  *= require_tree .
  *= require_self
  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+}
+
+#container {
+  color: red;
+  text-align: center;
+}
+
+#container_items {
+  margin: 0 auto;
+}
+
+#container_items ul {
+  list-style-type: none;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#container_link {
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+#container_item {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  vertical-align: middle;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_name a {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-left: 2rem;
+  border: 2px solid black;
+}
+
+#container_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 2px solid black;
+}
+
+#container_counter {
+  text-align: right;
+  border: 2px solid black;
+}
+
+#container_bio {
+  text-align: left;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_bio h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_bio p {
+  font-size: 1em;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_post {
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_post ul {
+  list-style-type: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_post ul li {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+#container_post ul li h3 {
+  text-align: left;
+}
+
+#container_post ul li p {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#container_post ul li div {
+  display: flex;
+  justify-content: flex-end;
+}

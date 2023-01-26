@@ -1,26 +1,28 @@
 
 <div>
-<section>
-  <div>User Image</div>
-  <div>
-    <h1><a><%= @user.name %></a></h1>
-    <span>Number of posts:<%= @user.posts_counter %></span>
+<section id='container_item'>
+  <div id='container_image'>User Image</div>
+  <div id='container_inner'>
+    <h1 id='container_name'><a><%= @user.name %></a></h1>
+    <h2 id='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
   </div>
 </section>
 
-<section>
+<section id='container_bio'>
   <h2>Bio</h2>
   <p><%= @user.bio %></p>
 </section>
 
-<section>
+<section id='container_post'>
  <ul>
    <% @user.posts.each do |post| %>
      <li>
        <h3>Post <%='#'%><%= post.id %></h3>
-       <p>Title: <%= post.title %></p>
-       <span>Comments: <%= post.comments_counter %></span>
+       <p> <%= post.text %></p>
+       <div>
+       <span>Comments: <%= post.comments_counter %></span>&nbsp;
        <span>Likes: <%= post.likes_counter %></span>
+       </div>
      </li>
    <% end %>
  </ul>

@@ -1,23 +1,22 @@
+<div id='container'>
 <h1>Users</h1>
 
 <p>Here is the list of users:</p>
-
-<div>
+</div>
+<div id='container_items'>
 <ul>
   <% @users.each do |user| %>
-  <li>
-    <div>User Image</div>
-    <div>
-      <h2><a><%= user.name %></a></h2>
-      <span>Number of posts:<%= user.posts_counter %></span>
+  <li id='container_item'>
+    <div id='container_image'>User Image</div>
+    <div id='container_inner'>
+      <h2 id='container_name'><a><%= user.name %></a></h2>
+      <h3 id='container_counter'>Number of posts:<%= user.posts_counter %></h3>
     </div>
   </li>
-  <li>
+  <li id='container_link'>
     <%= link_to "Show this user", user %>
   </li>
-  <br>
-  <br>
-  <br>
 <% end %>
-</div>
 </ul>
+</div>
+
