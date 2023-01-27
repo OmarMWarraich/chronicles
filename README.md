@@ -62,7 +62,7 @@ After you're finished please remove all the comments and instructions!
 
 > Describe your project in 1 or 2 sentences.
 
-**[Chronicles]** is a...
+**[Chronicles]** is a blog app where users can make accounts, create posts, get liked or commented upon by others.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -97,9 +97,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[coming soon]**
+- **[coming soon]**
+- **[coming soon]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,51 +125,60 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
+
 Example command:
 
 ```sh
  gem install rails
 ```
- -->
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
+
 Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:OmarMWarraich/chronicles.git
 ```
---->
+-
 
 ### Install
 
 Install this project with:
 
-<!--
+
 Example command:
 
 ```sh
   cd my-project
   gem install
 ```
---->
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
+
 Example command:
 
 ```sh
   rails server
 ```
---->
+-
+
+### Database Configuration
+
+Update the username and password in config/database.yml as per your local configurations. Then run the following commands.
+
+```sh
+  rails db:schema:load
+```
+
 
 ### Run tests
 
@@ -179,7 +188,7 @@ To run tests, run the following command:
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec/models && rspec spec/requests
 ```
 --->
 
@@ -203,11 +212,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **OmarMWarraich**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@OmarMWarraich](https://github.com/OmarMWarraich)
+- Twitter: [@omarwarraich1](https://twitter.com/omarwarraich1)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/o-va)
 
 👤 **Author2**
 
@@ -223,9 +232,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[coming soon]**
+- [ ] **[coming soon]**
+- [ ] **[coming soon]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,7 +254,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project kindly give it a ⭐️ on github.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,7 +264,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank Team Microverse for giving me the oppurtunity to work in a professional remote software development programme alongwith the best of the best.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,13 +274,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[Does this app have a friendly UI?]**
 
-  - [Answer_1]
+  - [Yes, this app has a very friendly UI.]
 
-- **[Question_2]**
+- **[Does this app have a database]**
 
-  - [Answer_2]
+  - [This app uses PostgreSQL database. For runnng this app, PostgreSQL need to be installed on your system.]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
