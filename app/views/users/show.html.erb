@@ -5,7 +5,9 @@
   <div id='container_inner'>
     <h1 id='container_name'><a><%= @user.name %></a></h1>
     <h2 id='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
-    <%= link_to 'New Post', new_user_post_path(@user), class: 'btn btn-primary' %>
+    <div id='container_link'>
+    <%= link_to 'New Post', new_user_post_path(@user.id) %>
+    </div>
   </div>
 </section>
 
@@ -18,17 +20,20 @@
  <ul>
    <% @user.posts.each do |post| %>
      <li>
-       <h3>Post <%='#'%><%= post.id %></h3>
-       <p> <%= post.text %></p>
-       <div>
-       <span>Comments: <%= post.comments_counter %></span>&nbsp;
-       <span>Likes: <%= post.likes_counter %></span>
-       </div>
+        <h3>Post <%='#'%><%= post.id %></h3>
+        <p> <%= post.text %></p>
+        <div id='container_link'>
+          <%= link_to 'Show Post', user_post_path(@post.id) %> 
+        </div>
+        <div>
+        <span>Comments: <%= @post.comments_counter %></span>&nbsp;
+        <span>Likes: <%= @post.likes_counter %></span>
+        </div>
      </li>
    <% end %>
  </ul>
  <button>
- See all posts
+ <%= link_to 'See all posts', user_posts_path(@user.id, @posts) %>
  </button>
 </section>
 </div>

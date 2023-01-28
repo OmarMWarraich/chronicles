@@ -1,11 +1,15 @@
 
-<div>
+<div id='container_posts_show'>
 <section id='container_bio'>
-  <div>
+  <div id='container_posts_desc_likes'>
+    <div>
     <h1>Post: <%= @post.title %> (#<%= @post.id %>) by <%=@user.name%></h1>
     <span>Comments: <%= @post.comments_counter %></span>
     <span>Likes: <%= @post.likes_counter %></span>
+    </div>
+    <div id="container_like_btn">
     <%= render partial: 'likes/like', locals: { post: @post } %>
+    </div>
   </div>
   <p><%= @post.text %></p>
 </section>
@@ -15,11 +19,11 @@
 <ul>
 <% @post.comments.each do |comment| %>
   <li>
-    <span><%= comment.author_id%>: <%= comment.text %></span>
+    <span><%= comment.author.name %>: <%= comment.text %></span>
   </li>
 <% end %>
 </ul>
-<div class="new_comment">
+<div id="new_comment">
   <h3>Add New Comment</h3>
   <%= render partial: 'comments/comment', locals: { post: @post } %>
 </div>
