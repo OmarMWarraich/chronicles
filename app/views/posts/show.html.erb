@@ -2,15 +2,16 @@
 <div>
 <section id='container_bio'>
   <div>
-    <h1>Post <%='#'%><%= @post.id %> <span>by <%=@user.name%></span></h1>
+    <h1>Post: <%= @post.title %> (#<%= @post.id %>) by <%=@user.name%></h1>
     <span>Comments: <%= @post.comments_counter %></span>
     <span>Likes: <%= @post.likes_counter %></span>
+    <%= render partial: 'likes/like', locals: { post: @post } %>
   </div>
-  <p><%= @post.title %></p>
   <p><%= @post.text %></p>
 </section>
 
 <section>
+<h2>Comments</h2>
 <ul>
 <% @post.comments.each do |comment| %>
   <li>
@@ -18,5 +19,9 @@
   </li>
 <% end %>
 </ul>
+<div class="new_comment">
+  <h3>Add New Comment</h3>
+  <%= render partial: 'comments/comment', locals: { post: @post } %>
+</div>
 </section>
 </div>

@@ -5,6 +5,7 @@
   <div id='container_inner'>
     <h1 id='container_name'><a><%= @user.name %></a></h1>
     <h2 id='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
+    <%= link_to 'New Post', new_user_post_path(@user), class: 'btn btn-primary' %>
   </div>
 </section>
 

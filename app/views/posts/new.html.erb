@@ -1,0 +1,75 @@
+<main>
+  <%= notice %>
+  <div class="new-post-card">
+    <h2>New Post</h2>
+    <%= form_with model: Post, url: user_posts_path(@user), method: :post, local: true do |f| %>
+        <div class="input">
+          <%= f.label :title, "Title" %>
+          <%= f.text_field :title, placeholder: "Title" %>
+        </div>
+        <div class="input">
+          <%= f.label :text, "Text" %>
+          <%= f.text_field :text, placeholder: "Text" %>
+        </div>
+        <%= f.submit "Create Post" %>
+        <% end %>
+    </div>
+    </main>
+    
+    # app/views/posts/show.html.erb
+    # Path: app/views/posts/show.html.erb
+    # Compare this snippet from app/controllers/likes_controller.rb:
+    # class LikesController < ApplicationController
+    #   def create
+    #     @post = Post.find(params[:post_id])
+    #     @user = User.find(params[:user_id])
+    #     @like = Like.new(like_params)
+    #     @like.liker_id = current_user.id
+    #     @like.post_id = @post.id
+    # 
+    #     if @like.save
+    #       redirect_to user_post_url(@user, @post)
+    #     else
+    #       flash.now[:errors] = @like.errors.full_messages
+    #       render :new
+    #     end
+    #   end
+    # end
+    # 
+    # Compare this snippet from app/controllers/posts_controller.rb:
+    # class PostsController < ApplicationController
+    #   def index
+    #     @user = User.find(params[:user_id])
+    #     @posts = Post.where(author_id: params[:user_id])
+    #   end
+    # 
+    #   def show
+    #     @user = User.find(params[:user_id])
+    #     @post = Post.find(params[:id])
+    #     @comments = Comment.where(post_id: params[:id])
+    #   end
+    # 
+    #   def new
+    #     post = Post.new
+    # 
+    #     respond_to do |format|
+    #       format.html { render :new, locals: { post: post } }
+    #     end
+    #   end
+    # 
+    #   def create
+    #     post = Post.new(post_params)
+    #     post.author_id = current_user.id
+    # 
+    #     if post.save
+    #       flash[:notice] = "Post created successfully"
+    #       redirect_to user_posts_url(post.author_id)
+    #     else
+    #       flash.now[:errors] = post.errors.full_messages
+    #       render :new
+    #     end
+    #   end
+    # end
+    # 
+    # Compare this snippet from app/views/comments/_comment.html.erb:
+    # <%= form_with model: Comment, url: user_post_comments_path(@user, @post), method: :post, local:
