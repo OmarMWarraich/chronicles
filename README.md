@@ -176,6 +176,7 @@ Example command:
 Update the username and password in config/database.yml as per your local configurations. Then run the following commands.
 
 ```sh
+  rails db:create
   rails db:schema:load
 ```
 
@@ -264,7 +265,7 @@ If you like this project kindly give it a ⭐️ on github.
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank Team Microverse for giving me the oppurtunity to work in a professional remote software development programme alongwith the best of the best.
+I would like to thank Team Microverse for giving me the oppurtunity to work in a professional remote software development programme.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
