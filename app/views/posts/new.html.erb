@@ -1,0 +1,18 @@
+<main id="container_new_post">
+  <%= notice %>
+  <div>
+    <h2>New Post</h2>
+    <%= form_with model: Post, url: user_posts_path, method: :post, local: true do |f| %>
+        <div class="input">
+          <%= f.label :title, "Title" %>
+          <%= f.text_field :title, placeholder: "Title" %>
+        </div>
+        <div class="input">
+          <%= f.label :text, "Text" %>
+          <%= f.text_field :text, placeholder: "Text" %>
+        </div>
+        <%= f.submit "Create Post" %>
+        <% end %>
+    </div>
+    </main>
+    

@@ -13,6 +13,9 @@
        <li>
          <h3>Post <%='#'%><%= post.id %></h3>
          <p> <%= post.text %></p>
+          <div id='container_link'>
+            <%= link_to 'Show Details', user_post_path(@user, post.id) %>
+          </div>
        </li>
      <% end %>
    </ul>

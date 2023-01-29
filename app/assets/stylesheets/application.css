@@ -155,3 +155,17 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+
+#container_new_post h2 {
+  border: 2px solid black;
+}
+
+#container_posts_show #container_posts_desc_likes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#comment_form {
+  display: flex;
+  justify-content: space-between;
+}
