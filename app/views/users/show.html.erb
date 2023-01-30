@@ -1,39 +1,51 @@
 
-<div id="container_items">
-<section id='container_item'>
-  <div id='container_image'>User Image</div>
-  <div id='container_inner'>
-    <h1 id='container_name'><a href="/<%= @users %>"><%= @user.name %></a></h1>
-    <h2 id='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
-    <%= link_to 'New Post', new_user_post_path(@user.id) %>
+<div class="container_items">
+<section class='container_item'>
+  <div class='container_outer'>
+  <div class='container_image'>User Image</div>
+  <div class='container_inner'>
+    <h1 class='container_name'><a href="/<%= @users %>"><%= @user.name %></a></h1>
+    <h3 class='container_counter'>
+    <span><%= link_to 'New Post', new_user_post_path(@user.id), class: 'container_link_post' %></span>
+    Number of posts:<%= @user.posts_counter %>
+    </h3>
+    </div>
+    </div>
+    
+</section>
+
+<section class='container_item'>
+  <div class='container_bio'>
+    <h4 class='container_bio_h4'>Bio</h4>
+    <p class='container_bio_p'><%= @user.bio %></p>
   </div>
 </section>
 
-<section id='container_bio'>
-  <h2>Bio</h2>
-  <p><%= @user.bio %></p>
-</section>
 
-<section id='container_post'>
- <ul>
-   <% @user.posts.each do |post| %>
-     <li>
-        <h3>Post <%='#'%><%= post.id %></h3>
-        <p> <%= post.text %></p>
-        <div id='container_link'>
-          <%= link_to 'Show Post', user_post_path(post.id) %> 
+<section class='container_item'>
+  <div class='container_post'>
+      <% @posts.each do |post| %>
+        <div class='container_post_item'>
+        <%= link_to user_post_path(@user, post), class: 'container_user_post_path' do %>
+          <div>
+          <h5>Post # <%= post.id %>
+          <span>
+          <p><%= post.text %></p>
+            <span class='container_counter'>Comments: <%= post.comments_counter %></span>&nbsp;
+            <span class='container_counter'>Likes: <%= post.likes_counter %></span>
+          </span>
+          </h5>
         </div>
-        <div>
-        <span>Comments: <%= post.comments_counter %></span>&nbsp;
-        <span>Likes: <%= post.likes_counter %></span>
+        <% end %>
         </div>
-     </li>
-   <% end %>
- </ul>
- <button>
- <%= link_to 'See all posts', user_posts_path(@user, @user.posts) %>
- </button>
-</section>
+        <% end %>
+        </div>
+        
+        </section>
+        <div class='container_link_all_posts'>
+        <%= link_to 'See all posts', user_posts_path(@user, @user.posts), class: 'container_link_post_all' %>
+          </div>
+
 </div>
 
-# how to code href in rails
+

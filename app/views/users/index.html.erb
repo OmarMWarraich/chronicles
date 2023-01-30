@@ -1,13 +1,15 @@
 <div class="container-items">
-  <% @users.each do |user| %>    
-    <%= link_to user_path(user.id), class: 'container_link' do %>
+  <% @users.each do |user| %>
+    <div class="container_item">    
       <div class="container_outer">
         <div class="container_image">User Image</div>
+        <%= link_to user_path(user.id), class: 'container_link' do %>
         <div class="container_inner" >
-        <h2 class="container_name"><%= user.name %></h2>
-        <h3 class="container_counter">Number of posts:<%= user.posts_counter %></h3>
+          <h1 class="container_name"><%= user.name %></h1>
+          <h3 class="container_counter">Number of posts:<%= user.posts_counter %></h3>
         </div>
       </div>
+    </div>
     <% end %>
   <% end %>
 </div>
