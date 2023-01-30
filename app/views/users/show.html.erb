@@ -1,13 +1,11 @@
 
-<div>
+<div id="container_items">
 <section id='container_item'>
   <div id='container_image'>User Image</div>
   <div id='container_inner'>
-    <h1 id='container_name'><a><%= @user.name %></a></h1>
+    <h1 id='container_name'><a href="/<%= @users %>"><%= @user.name %></a></h1>
     <h2 id='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
-    <div id='container_link'>
     <%= link_to 'New Post', new_user_post_path(@user.id) %>
-    </div>
   </div>
 </section>
 
@@ -38,3 +36,4 @@
 </section>
 </div>
 
+# how to code href in rails
