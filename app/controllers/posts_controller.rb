@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(comments: [:author])
+    @current_user = current_user
+    @posts = @user.posts.all.order(id: :asc).limit(3)
   end
 
   def show

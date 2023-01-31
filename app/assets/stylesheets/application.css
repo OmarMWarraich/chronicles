@@ -180,3 +180,145 @@ body {
 .container_user_post_path div {
   color: black;
 }
+
+.container_comments {
+  list-style-type: none;
+  display: flex;
+  border: 2px solid black;
+  border-bottom: none;
+}
+
+.container_comments h4 {
+  margin-left: 10px;
+}
+
+.container_post_index_posts {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 0.9fr;
+  gap: 0.5rem;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.container_d {
+  text-decoration: none;
+  color: black;
+}
+
+.container_post_index_comments:first-of-type {
+  border-bottom: 2px solid black;
+}
+
+.container_pagination {
+  text-align: center;
+}
+
+.container_bio_post_show {
+  border: 2px solid black;
+}
+
+.container_posts_desc_likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_like_btn {
+  margin-right: 5rem;
+}
+
+.post_show_comments {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.container_post_show_comments {
+  border: 2px solid black;
+  margin-top: 2px;
+}
+
+.container_post_show_comments h2 {
+  text-align: center;
+}
+
+.new_comment {
+  text-align: center;
+}
+
+.new_comment_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_new_post {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+.input_area {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.input_title {
+  width: 500px;
+  height: 50px;
+}
+
+.post_submit {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.comment_field {
+  width: 500px;
+  height: 100px;
+}
+
+.comment_submit {
+  width: 150px;
+  height: 50px;
+  margin: 2rem auto;
+}
+
+.back_link {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.back_link a {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: rgb(184, 154, 56);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.like_form_submit {
+  width: 150px;
+  height: 50px;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+  background-color: rgb(184, 154, 56);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+  color: #fff;
+}

@@ -1,34 +1,36 @@
 
-<div id='container_posts_show'>
-<section id='container_bio'>
-  <div id='container_posts_desc_likes'>
+<div class='container_item'>
+<section class='container_bio_post_show'>
+  <div class='container_posts_desc_likes'>
     <div>
     <h1>Post: <%= @post.title %> (#<%= @post.id %>) by <%=@user.name%></h1>
     <span>Comments: <%= @post.comments_counter %></span>
     <span>Likes: <%= @post.likes_counter %></span>
     </div>
-    <div id="container_like_btn">
+    <div class="container_like_btn">
     <%= render partial: 'likes/like', locals: { post: @post } %>
     </div>
   </div>
   <p><%= @post.text %></p>
 </section>
 
-<section>
+<section class='container_post_show_comments'>
 <h2>Comments</h2>
-<ul>
+<ul class='post_show_comments'>
 <% @post.comments.each do |comment| %>
   <li>
     <span><%= comment.author.name %>: <%= comment.text %></span>
   </li>
 <% end %>
 </ul>
-<div id="new_comment">
+<div class="new_comment">
   <h3>Add New Comment</h3>
+  <div class="new_comment_form">
   <%= render partial: 'comments/comment', locals: { post: @post } %>
+  </div>
 </div>
 </section>
 </div>
-<div style="text-align:center;">
+<div class='back_link'>
 <%= link_to 'Back To Main', root_path %>
 </div>
