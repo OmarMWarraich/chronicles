@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.includes(comments: [:author]).find(params[:id])
     @users = User.all
+    @comments = @post.comments.all.order(id: :asc)
   end
 
   def new
