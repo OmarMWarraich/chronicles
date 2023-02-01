@@ -43,7 +43,10 @@
         
         </section>
         <div class='container_link_all_posts'>
-        <%= link_to 'See all posts', user_posts_path(@user, @user.posts), class: 'container_link_post_all' %>
+        
+        <a href="/users/<%=@user.id%>/posts" class= 'container_link_post_all'>
+        See All Posts
+        </a>
           </div>
 
 </div>

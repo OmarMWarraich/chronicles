@@ -19,9 +19,9 @@
         </div>
         <% end %>
             <div class='container_post_index_comments'>
-            <% post.comments.limit(5).each do |comment| %>
+            <% post.comments.includes(:author).limit(5).each do |comment| %>
               <div class='container_comments'>
-                <p><%= @current_user.name %>: </p>
+                <p><%= comment.author.name %>: </p>
                 <p><%= comment.text %></p>
                 </div>
             <% end %>
