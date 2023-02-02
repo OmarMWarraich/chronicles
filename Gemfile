@@ -50,10 +50,10 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner' # [https://github.com/DatabaseCleaner/database_cleaner]
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing' # [https://github.com/rails/rails-controller-testing]
   gem 'rspec-rails' # [https://github.com/rspec/rspec-rails/releases]
-  gem 'database_cleaner' # [https://github.com/DatabaseCleaner/database_cleaner]
 end
 
 group :development do
@@ -75,4 +75,5 @@ group :test do
 end
 
 # Use RuboCop for code linting [https://rubocop.org/]
+gem 'factory_bot_rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
