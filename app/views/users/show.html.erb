@@ -1,10 +1,10 @@
-
+<section class='users_show'>
 <div class="container_items">
 <section class='container_item'>
   <div class='container_outer'>
   <div class='container_image'>User Image</div>
   <div class='container_inner'>
-    <h1 class='container_name'><a href="/<%= @users %>"><%= @user.name %></a></h1>
+    <h1 class='container_name'><%= @user.name %></h1>
     <h3 class='container_counter'>
     <span><%= link_to 'New Post', new_user_post_path(@user.id), class: 'container_link_post' %></span>
     Number of posts:<%= @user.posts_counter %>
@@ -50,5 +50,5 @@
           </div>
 
 </div>
-
+</section>
 

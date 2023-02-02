@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: #232323;
+  background-color: rgb(184, 154, 56);
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -50,28 +50,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
   border-radius: 50%;
-}
-
-.container_link,
-.container_link_post,
-.container_user_post_path {
-  text-decoration: none;
-}
-
-.container_link_post {
-  color: rgba(72, 0, 255, 0.613);
-  background-color: rgb(184, 154, 56);
-  padding: 0.6rem 2rem;
-  margin-top: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
-}
-
-.container_link_post:hover {
-  background-color: rgba(72, 0, 255, 0.613);
-  color: rgb(184, 154, 56);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
 }
 
@@ -79,8 +58,30 @@ body {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1fr 1fr;
-  border: 2px solid black;
   border-radius: 10px;
+}
+
+.container_inner * {
+  text-decoration: none;
+  color: #523718;
+}
+
+.container_inner,
+.container_user_post_path {
+  text-decoration: none;
+  color: #523718;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+}
+
+.container-items .container_inner:hover,
+.container_image:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  background-color: #41320a;
+}
+
+.users_show .container_inner:hover {
+  transform: none;
+  background-color: rgb(184, 154, 56);
 }
 
 .container_name,
@@ -106,46 +107,41 @@ body {
   font-size: 3rem;
 }
 
+.container_link {
+  text-decoration: none;
+  color: #523718;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.container_link_post {
+  color: rgb(184, 154, 56);
+  background-color: #523718;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
 .container_bio {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  border: 2px solid black;
-  border-radius: 10px;
 }
 
-@media screen  and (max-width: 768px) {
-  .container_outer {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.75fr 1fr;
-    gap: 1rem;
-  }
+.container_comments,
+.container_user_post_path div,
+.container_bio,
+.posts_index .container_d div {
+  color: #523718;
+  text-align: justify;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+}
 
-  .container_inner {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr;
-  }
-
-  .container_name {
-    font-size: 2rem;
-  }
-
-  .container_counter {
-    font-size: 0.5rem;
-  }
-
-  .container_image {
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-  }
-
-  .container_link_post {
-    font-size: 0.5rem;
-    margin: 0;
-    padding: 0.2rem 0.5rem;
-  }
+.container_bio h4 {
+  font-size: 2rem;
 }
 
 .container_post p {
@@ -157,15 +153,14 @@ body {
 }
 
 .container_post_item {
-  border: 2px solid black;
   margin-bottom: 5rem;
   border-radius: 10px;
 }
 
 .container_link_post_all {
   text-decoration: none;
-  color: rgba(72, 0, 255, 0.613);
-  background-color: rgb(184, 154, 56);
+  color: rgb(184, 154, 56);
+  background-color: #523718;
   padding: 0.6rem 2rem;
   margin-top: 2rem;
   border-radius: 20px;
@@ -177,15 +172,11 @@ body {
   text-align: center;
 }
 
-.container_user_post_path div {
-  color: black;
-}
-
 .container_comments {
   list-style-type: none;
   display: flex;
-  border: 2px solid black;
-  border-bottom: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+  border-radius: 10px;
 }
 
 .container_comments h4 {
@@ -198,22 +189,32 @@ body {
   display: grid;
   grid-template-rows: 0.5fr 0.9fr;
   gap: 0.5rem;
-  border: 2px solid black;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
 .container_d {
   text-decoration: none;
-  color: black;
 }
 
-.container_post_index_comments:first-of-type {
-  border-bottom: 2px solid black;
+.container_post_index_comments {
+  border-radius: 10px;
 }
 
 .container_pagination {
   text-align: center;
+}
+
+.container_pagination button {
+  text-align: center;
+  background-color: #523718;
+  color: rgb(184, 154, 56);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+  margin-top: 20px;
 }
 
 .container_bio_post_show {
@@ -321,4 +322,37 @@ body {
   border: none;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
   color: #fff;
+}
+
+@media screen  and (max-width: 768px) {
+  .container_outer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.75fr 1fr;
+    gap: 1rem;
+  }
+
+  .container_inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+  }
+
+  .container_name {
+    font-size: 2rem;
+  }
+
+  .container_counter {
+    font-size: 0.5rem;
+  }
+
+  .container_image {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .container_link_post {
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+  }
 }

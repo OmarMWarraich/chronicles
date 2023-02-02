@@ -1,4 +1,4 @@
-<div>
+<div class = 'posts_index'>
   <section class='container_item'>
   <div class='container_outer'>
   <div class='container_image'>User Image</div>
@@ -10,7 +10,6 @@
 </section>
   <div class='container_item'>
   <section class='container_post'>
-    
      <% @posts.each do |post| %>
         <%= link_to user_post_path(@user, post.id), class: 'container_d' do %>
         <div class='container_post_index_posts'>
