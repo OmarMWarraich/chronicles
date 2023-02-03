@@ -1,25 +1,36 @@
-<div>
-  <section id='container_item'>
-  <div id='container_image'>User Image</div>
-  <div id='container_inner'>
-    <h1 id='container_name'><a><%= @user.name %></a></h1>
-    <h2 id='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
+<div class = 'posts_index'>
+  <section class='container_item'>
+  <div class='container_outer'>
+  <div class='container_image'>User Image</div>
+  <div class='container_inner'>
+    <h1 class='container_name'><a><%= @user.name %></a></h1>
+    <h2 class='container_counter'>Number of posts:<%= @user.posts_counter %></h2>
+  </div>
   </div>
 </section>
-
-  <section id='container_post'>
-   <ul>
+  <div class='container_item'>
+  <section class='container_post'>
      <% @posts.each do |post| %>
-       <li>
+        <%= link_to user_post_path(@user, post.id), class: 'container_d' do %>
+        <div class='container_post_index_posts'>
          <h3>Post <%='#'%><%= post.id %></h3>
+          <h4><%= post.title %></h4>
          <p> <%= post.text %></p>
-          <div id='container_link'>
-            <%= link_to 'Show Details', user_post_path(@user, post.id) %>
-          </div>
-       </li>
+        </div>
+        <% end %>
+            <div class='container_post_index_comments'>
+            <% post.comments.includes(:author).limit(5).each do |comment| %>
+              <div class='container_comments'>
+                <p><%= comment.author.name %>: </p>
+                <p><%= comment.text %></p>
+                </div>
+            <% end %>
+            </div>
      <% end %>
-   </ul>
-   <a>Pagination</a>
+     <div class='container_pagination'>
+   <button>Pagination</button>
+    </div>
   </section>
+  </div>
 </div>
 

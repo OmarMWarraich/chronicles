@@ -1,17 +1,15 @@
-<main id="container_new_post">
+<main class="container_new_post">
   <%= notice %>
   <div>
     <h2>New Post</h2>
     <%= form_with model: Post, url: user_posts_path, method: :post, local: true do |f| %>
         <div class="input">
-          <%= f.label :title, "Title" %>
-          <%= f.text_field :title, placeholder: "Title" %>
+          <%= f.text_field :title, placeholder: "Title", class: 'input_title' %>
         </div>
         <div class="input">
-          <%= f.label :text, "Text" %>
-          <%= f.text_field :text, placeholder: "Text" %>
+          <%= f.text_area :text, placeholder: "Text", class: 'input_area' %>
         </div>
-        <%= f.submit "Create Post" %>
+        <%= f.submit "Create Post", class: 'post_submit' %>
         <% end %>
     </div>
     </main>

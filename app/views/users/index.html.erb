@@ -1,22 +1,16 @@
-<div id='container'>
-<h1>Users</h1>
-
-<p>Here is the list of users:</p>
-</div>
-<div id='container_items'>
-<ul>
+<div class="container-items">
   <% @users.each do |user| %>
-  <li id='container_item'>
-    <div id='container_image'>User Image</div>
-    <div id='container_inner'>
-      <h2 id='container_name'><a><%= user.name %></a></h2>
-      <h3 id='container_counter'>Number of posts:<%= user.posts_counter %></h3>
+    <div class="container_item">    
+      <div class="container_outer">
+        <div class="container_image">User Image</div>
+        <%= link_to user_path(user.id), class: 'container_link' do %>
+        <div class="container_inner" >
+          <h1 class="container_name"><%= user.name %></h1>
+          <h3 class="container_counter">Number of posts:<%= user.posts_counter %></h3>
+        </div>
+      </div>
     </div>
-  </li>
-  <li id='container_link'>
-    <%= link_to "Show this user", user %>
-  </li>
-<% end %>
-</ul>
+    <% end %>
+  <% end %>
 </div>
 
