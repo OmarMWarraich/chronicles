@@ -14,6 +14,7 @@
         <%= link_to user_post_path(@user, post.id), class: 'container_d' do %>
         <div class='container_post_index_posts'>
          <h3>Post <%='#'%><%= post.id %></h3>
+          <h4><%= post.title %></h4>
          <p> <%= post.text %></p>
         </div>
         <% end %>

@@ -47,4 +47,17 @@ RSpec.describe 'PostsShow', type: :feature do
   it 'shows the pagination section' do
     expect(page).to have_content('Pagination')
   end
+
+  it 'shows the title of the post' do
+    expect(page).to have_content(@posts[0].title)
+  end
+
+  it 'shows the text of the comment' do
+    expect(page).to have_content(@comments[0].text)
+  end
+
+  it 'redirects to the post\'s page when the post is clicked' do
+    click_link(@posts[0].text)
+    expect(page).to have_current_path(user_post_path(@user1, @posts[0]))
+  end
 end

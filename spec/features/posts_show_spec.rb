@@ -50,4 +50,12 @@ RSpec.describe 'PostsShow', type: :feature do
   it "should show the post's likes counter" do
     expect(page).to have_content(@post1.likes_counter)
   end
+
+  it 'shows the name of the author of the comment' do
+    expect(page).to have_content(@comments[0].author.name)
+  end
+
+  it 'shows the text of the comment' do
+    expect(page).to have_content(@comments[0].text)
+  end
 end
