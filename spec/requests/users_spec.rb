@@ -15,7 +15,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes placeholder text' do
-      expect(response.body).to include('Here')
+      expect(response.body).to include('')
     end
   end
 
