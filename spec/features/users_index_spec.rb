@@ -1,6 +1,4 @@
 require 'rails_helper'
-<<<<<<< HEAD
-=======
 
 RSpec.describe "UsersIndex", type: :feature do
 
@@ -54,4 +52,3 @@ end
 
     
 
->>>>>>> 3e0ca6bc4a62c468c9b5a7a1c0f22fa96a0adbe8
