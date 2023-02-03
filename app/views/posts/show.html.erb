@@ -17,7 +17,7 @@
 <section class='container_post_show_comments'>
 <h2>Comments</h2>
 <ul class='post_show_comments'>
-<% @comments.includes(:author).each do |comment| %>
+<% @comments.each do |comment| %>
   <li>
     <span><%= comment.author.name %>: <%= comment.text %></span>
   </li>

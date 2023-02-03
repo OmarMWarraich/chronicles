@@ -9,7 +9,7 @@ RSpec.describe 'Likes', type: :request do
       Post.create(author: @user, title: 'hey', text: 'hello world')
     end
   end
-  
+
   describe 'GET /create' do
     before(:example) do
       @post = @user.posts[0]
