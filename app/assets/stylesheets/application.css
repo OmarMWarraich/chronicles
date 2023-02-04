@@ -259,6 +259,8 @@ body {
   align-items: center;
 }
 
+.container_sign_in,
+.container_sign_up,
 .container_new_post {
   position: absolute;
   top: 50%;

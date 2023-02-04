@@ -58,6 +58,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing' # [https://github.com/rails/rails-controller-testing]
   gem 'rspec-rails' # [https://github.com/rspec/rspec-rails/releases]
+  gem 'letter_opener' 
 end
 
 group :development do
