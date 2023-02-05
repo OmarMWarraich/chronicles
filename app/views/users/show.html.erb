@@ -6,12 +6,13 @@
   <div class='container_inner'>
     <h1 class='container_name'><%= @user.name %></h1>
     <h3 class='container_counter'>
+    <% if can? :create, Post %>
     <span><%= link_to 'New Post', new_user_post_path(@user.id), class: 'container_link_post' %></span>
+    <% end %>
     Number of posts:<%= @user.posts_counter %>
     </h3>
     </div>
-    </div>
-    
+    </div>    
 </section>
 
 <section class='container_item'>
@@ -20,7 +21,6 @@
     <p class='container_bio_p'><%= @user.bio %></p>
   </div>
 </section>
-
 
 <section class='container_item'>
   <div class='container_post'>
@@ -40,10 +40,8 @@
         </div>
         <% end %>
         </div>
-        
         </section>
-        <div class='container_link_all_posts'>
-        
+        <div class='container_link_all_posts'>        
         <a href="/users/<%=@user.id%>/posts" class= 'container_link_post_all'>
         See All Posts
         </a>
