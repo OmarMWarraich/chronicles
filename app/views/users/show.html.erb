@@ -6,7 +6,9 @@
   <div class='container_inner'>
     <h1 class='container_name'><%= @user.name %></h1>
     <h3 class='container_counter'>
+    <% if can? :create, Post %>
     <span><%= link_to 'New Post', new_user_post_path(@user.id), class: 'container_link_post' %></span>
+    <% end %>
     Number of posts:<%= @user.posts_counter %>
     </h3>
     </div>

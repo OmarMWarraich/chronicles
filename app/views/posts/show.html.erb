@@ -20,6 +20,9 @@
 <% @comments.each do |comment| %>
   <li>
     <span><%= comment.author.name %>: <%= comment.text %></span>
+    <% if can? :destroy, comment %>
+      <%= link_to 'Delete', user_post_comment_path(@user, @post, comment), method: :delete %>
+    <% end %>
   </li>
 <% end %>
 </ul>
