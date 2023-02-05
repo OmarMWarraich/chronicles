@@ -13,6 +13,11 @@
   </div>
   <p><%= @post.text %></p>
 </section>
+<% if can? :destroy, @post %>
+            <%= form_with model: @post, url: user_post_path(@user.id, @post.id), method: :delete do |form| %>
+              <%= form.submit "Delete Post", class: "see" %>
+            <% end %>
+          <% end %>  
 
 <section class='container_post_show_comments'>
 <h2>Comments</h2>
@@ -21,8 +26,10 @@
   <li>
     <span><%= comment.author.name %>: <%= comment.text %></span>
     <% if can? :destroy, comment %>
-      <%= link_to 'Delete', user_post_comment_path(@user, @post, comment), method: :delete %>
+    <%= form_with model: comment, url: user_post_comment_path(@user.id, @post.id, comment.id), method: :delete do |form| %>
+      <%= form.submit "Delete", class: "see" %>
     <% end %>
+  <% end %>
   </li>
 <% end %>
 </ul>

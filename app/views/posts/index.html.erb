@@ -16,11 +16,10 @@
          <h3>Post <%='#'%><%= post.id %></h3>
           <h4><%= post.title %></h4>
          <p> <%= post.text %></p>
-        </div>
-        <if can? :destroy, post %>
-        <%= link_to 'Delete', user_post_path(@user, post), method: :delete %>
-        <% end %>
-        <% end %>
+         </div>
+         
+         <% end %>
+         
             <div class='container_post_index_comments'>
             <% post.comments.includes(:author).limit(5).each do |comment| %>
               <div class='container_comments'>

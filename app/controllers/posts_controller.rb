@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
     if post.save
       flash[:notice] = 'Post created successfully'
-      redirect_to user_posts_url(post.author_id)
+      redirect_to user_posts_path
     else
       flash.now[:errors] = post.errors.full_messages
       render :new
@@ -35,8 +35,11 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
-    post.author.posts_counter -= 1
-    post.destroy
-    redirect_to user_posts_url(post.author_id)
+    if post.destroy
+      redirect_to user_path(current_user), notice: 'Post deleted successfully'
+    else
+      flash.now[:error] = 'Error deleting post'
+      render :show
+    end
   end
 end
