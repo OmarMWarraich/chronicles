@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       redirect_to user_post_url(@user, @post)
-      flash[:success] = "Comment created successfully"
+      flash[:success] = 'Comment created successfully'
     else
       flash.now[:errors] = @comment.errors.full_messages
       render :new
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
     comment = Comment.find(params[:id])
     if comment.destroy
       redirect_to user_post_path
-      flash[:success] = ["Comment deleted successfully"]
+      flash[:success] = ['Comment deleted successfully']
     else
       flash.now[:error] = 'Error deleting comment'
       render :show
