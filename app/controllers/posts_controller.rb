@@ -32,4 +32,11 @@ class PostsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.author.posts_counter -= 1
+    post.destroy
+    redirect_to user_posts_url(post.author_id)
+  end
 end

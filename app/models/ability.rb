@@ -9,11 +9,11 @@ class Ability
       user ||= User.new # guest user (not logged in)
       can :read, Post
 
-      return unless user.present?
+      return unless user.present? # additional permissions for logged in users (they can read their own posts)
       
       can :create, Post, author_id: user.id
       can :manage, Comment, author_id: user.id
-      return unless user.admin?
+      return unless user.admin? # additional permissions for administrators
       can :manage, :all
       
     #
