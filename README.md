@@ -97,9 +97,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[Create Posts]**
-- **[Add Comments]**
-- **[Add Likes]**
+- Post, Comment, Like and Delete
+- Authentication with Devise
+- Authorization with Cancan
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -132,7 +132,6 @@ Example command:
  gem install rails
 ```
 
-
 ### Setup
 
 Clone this repository to your desired folder:
@@ -141,7 +140,6 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  cd my-folder
   git clone git@github.com:OmarMWarraich/chronicles.git
 ```
 -
@@ -154,10 +152,11 @@ Install this project with:
 Example command:
 
 ```sh
-  cd my-project
   gem install
 ```
 -
+
+Do not forget to update the Ruby version in the GemFile and .ruby-version files of the Project if having conflict with your local version.
 
 ### Usage
 
@@ -189,7 +188,7 @@ To run tests, run the following command:
 Example command:
 
 ```sh
-  rspec spec/models && rspec spec/requests
+  rspec spec
 ```
 --->
 
@@ -201,7 +200,7 @@ You can deploy this project using:
 Example:
 
 ```sh
-
+  Coming Soon
 ```
  -->
 
@@ -211,19 +210,11 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **OmarMWarraich**
 
 - GitHub: [@OmarMWarraich](https://github.com/OmarMWarraich)
 - Twitter: [@omarwarraich1](https://twitter.com/omarwarraich1)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/o-va)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,11 +222,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[Authentication]**
-- [ ] **[Authorization]**
-- [ ] **[Add API Endpoints]**
+- Api Endpoints
+- Upload Pics with Carrierwave
+- NavBar having UserLogo w/ Gravtastic
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -254,8 +243,6 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 > Write a message to encourage readers to support your project
-
-If you like this project kindly give it a ⭐️ on github.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
