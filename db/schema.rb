@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_04_080413) do
     t.string "name"
     t.text "photo"
     t.string "bio"
+    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "posts_counter", default: 0, null: false
