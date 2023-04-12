@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.3'
+ruby '3.2.0'
 
 gem 'dotenv-rails', groups: %i[development test]
 
@@ -85,3 +85,5 @@ end
 # Use RuboCop for code linting [https://rubocop.org/]
 gem 'factory_bot_rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
