@@ -62,6 +62,8 @@ group :development, :test do
   gem 'letter_opener'
   gem 'rails-controller-testing' # [https://github.com/rails/rails-controller-testing]
   gem 'rspec-rails' # [https://github.com/rspec/rspec-rails/releases]
+  gem 'better_errors', '~> 2.10', '>= 2.10.1'
+  gem 'binding_of_caller', '~> 1.0', '>= 1.0.1'
 end
 
 group :development do
