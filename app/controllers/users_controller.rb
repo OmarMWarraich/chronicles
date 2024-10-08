@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @users = User.all
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
     @posts = @user.posts.order(id: :asc).limit(3)
   end
 end

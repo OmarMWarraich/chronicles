@@ -57,13 +57,13 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'better_errors', '~> 2.10', '>= 2.10.1'
+  gem 'binding_of_caller', '~> 1.0', '>= 1.0.1'
   gem 'database_cleaner' # [https://github.com/DatabaseCleaner/database_cleaner]
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'letter_opener'
   gem 'rails-controller-testing' # [https://github.com/rails/rails-controller-testing]
   gem 'rspec-rails' # [https://github.com/rspec/rspec-rails/releases]
-  gem 'better_errors', '~> 2.10', '>= 2.10.1'
-  gem 'binding_of_caller', '~> 1.0', '>= 1.0.1'
 end
 
 group :development do
@@ -88,4 +88,5 @@ end
 gem 'factory_bot_rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem "dockerfile-rails", ">= 1.2", :group => :development
+gem 'dockerfile-rails', '>= 1.2', group: :development
+gem 'friendly_id', '~> 5.5', '>= 5.5.1'
