@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(params.require(:post).permit(:title, :text))
+    post = Post.new(params.require(:post).permit(:title, :text, :cover))
     post.author_id = current_user.id
 
     if post.save

@@ -3,14 +3,17 @@
   <div>
     <h2>New Post</h2>
     <%= form_with model: Post, url: user_posts_path, method: :post, local: true do |f| %>
-        <div class="input">
-          <%= f.text_field :title, placeholder: "Title", class: 'input_title' %>
-        </div>
-        <div class="input">
-          <%= f.text_area :text, placeholder: "Text", class: 'input_area' %>
-        </div>
-        <%= f.submit "Create Post", class: 'post_submit' %>
-        <% end %>
-    </div>
-    </main>
+      <div class="input">
+        <%= f.text_field :title, placeholder: "Title", class: 'input_title' %>
+      </div>
+      <div class="input">
+        <%= f.text_area :text, placeholder: "Text", class: 'input_area' %>
+      </div>
+      <div class="input">
+        <%= f.file_field :cover, class: 'input_file' %>
+      </div>
+      <%= f.submit "Create Post", class: 'post_submit' %>
+    <% end %>
+   </div>
+</main>
     
