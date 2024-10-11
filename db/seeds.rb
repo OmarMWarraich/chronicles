@@ -13,6 +13,7 @@
   Post.create(
     title: "Post #{i + 1}",
     text: "This is the text of the post #{i + 1}",
+    cover: "https://picsum.photos/seed/#{i + 1}/800/600",
     author_id: User.first.id
   )
 end

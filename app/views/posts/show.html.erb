@@ -12,6 +12,7 @@
     </div>
   </div>
   <p><%= @post.text %></p>
+  <%= image_tag @post.cover.url, style: 'width: 600px;' if @post.cover? %>
 </section>
 <% if can? :destroy, @post %>
             <%= form_with model: @post, url: user_post_path(@user.id, @post.id), method: :delete do |form| %>

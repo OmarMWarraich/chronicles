@@ -16,6 +16,7 @@
          <h3>Post <%='#'%><%= post.id %></h3>
           <h4><%= post.title %></h4>
          <p> <%= post.text %></p>
+         <%= image_tag post.cover.url, style: 'width: 600px;' if post.cover? %>
          </div>
          
          <% end %>
@@ -30,7 +31,8 @@
             </div>
      <% end %>
      <div class='container_pagination'>
-      <%= will_paginate @posts %>
+      <%= will_paginate @posts
+       %>
     </div>
   </section>
   </div>

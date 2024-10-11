@@ -11,6 +11,8 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
   after_destroy :decrement_posts_counter
 
+  mount_uploader :cover, CoverUploader
+
   def recent_five_comments
     comments.limit(5).reverse
   end
