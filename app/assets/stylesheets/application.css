@@ -203,6 +203,7 @@ body {
 
 .container_pagination {
   text-align: center;
+  margin: 2rem 0;
 }
 
 .container_pagination button {
@@ -215,6 +216,11 @@ body {
   margin: 0 0.5rem;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
   margin-top: 20px;
+}
+
+.pagination * {
+  border: 2px solid black;
+  padding: 5px;
 }
 
 .container_bio_post_show {

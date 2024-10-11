@@ -90,3 +90,4 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'dockerfile-rails', '>= 1.2', group: :development
 gem 'friendly_id', '~> 5.5', '>= 5.5.1'
+gem 'will_paginate', '~> 4.0', '>= 4.0.1'

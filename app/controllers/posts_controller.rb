@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @current_user = current_user
-    @posts = @user.posts.all.order(id: :asc).limit(3)
+    @posts = @user.posts.order(id: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def show
