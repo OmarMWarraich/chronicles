@@ -40,11 +40,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.mandrillapp.com",
-    port: 587,
-    domain: "topgeardirect.com",
-    user_name: "omar@topgeardirect.com",
-    password: "md-vysX-FPutKC4inTI764QWg",
+    address: Rails.application.credentials.dig(:smtp, :address),
+    port: Rails.application.credentials.dig(:smtp, :port),
+    domain: Rails.application.credentials.dig(:smtp, :domain),
+    user_name: Rails.application.credentials.dig(:smtp, :username),
+    password: Rails.application.credentials.dig(:smtp, :api_key),
     authentication: "login",
     enable_starttls_auto: true
   }

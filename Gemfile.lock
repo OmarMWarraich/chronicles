@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    MailchimpTransactional (1.0.59)
+      excon (>= 0.76.0, < 1)
+      json (~> 2.1, >= 2.1.0)
     actioncable (7.0.4)
       actionpack (= 7.0.4)
       activesupport (= 7.0.4)
@@ -127,6 +130,7 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    excon (0.112.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -317,6 +321,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  MailchimpTransactional (~> 1.0, >= 1.0.59)
   annotate (~> 3.2)
   better_errors (~> 2.10, >= 2.10.1)
   binding_of_caller (~> 1.0, >= 1.0.1)
