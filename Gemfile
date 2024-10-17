@@ -95,3 +95,4 @@ gem 'will_paginate', '~> 4.0', '>= 4.0.1'
 gem 'carrierwave', '~> 3.0', '>= 3.0.7'
 
 gem 'annotate', '~> 3.2'
+gem 'MailchimpTransactional', '~> 1.0', '>= 1.0.59'

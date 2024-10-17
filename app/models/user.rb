@@ -32,6 +32,8 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: %i[slugged history finders]
 
+  after_create :send_welcome_email
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :posts, foreign_key: :author_id
@@ -47,5 +49,9 @@ class User < ApplicationRecord
 
   def is?(requested_role)
     role == requested_role.to_s
+  end
+
+  def send_welcome_email
+    AdminMailer.new_user(self).deliver
   end
 end
