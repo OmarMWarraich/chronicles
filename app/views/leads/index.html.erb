@@ -1,0 +1,9 @@
+<h1>SignUp for my newsletter</h1>
+
+<%= form_for @lead do |f| %>
+  <%= f.text_field :name, placeholder: "Your Name" %>
+  <%= f.text_field :email, placeholder: "Your Email" %>
+  <%= f.select :device, ["IPhone", "Android"], prompt: "Your Device" %>
+  <%= f.country_select :country %>
+  <%= f.submit "Sign Up" %>
+<% end %>

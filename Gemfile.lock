@@ -104,6 +104,10 @@ GEM
       marcel (~> 1.0.0)
       ssrf_filter (~> 1.0)
     concurrent-ruby (1.1.10)
+    countries (7.0.0)
+      unaccent (~> 0.3)
+    country_select (10.0.0)
+      countries (> 5.0, < 8.0)
     crass (1.0.6)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
@@ -296,6 +300,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    unaccent (0.4.0)
     unicode-display_width (2.4.2)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -329,6 +334,7 @@ DEPENDENCIES
   cancancan
   capybara
   carrierwave (~> 3.0, >= 3.0.7)
+  country_select (~> 10.0)
   database_cleaner
   debug
   devise

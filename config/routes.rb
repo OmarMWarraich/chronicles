@@ -2,6 +2,7 @@
 #
 
 Rails.application.routes.draw do
+  resources :leads
   devise_for :users
   
   resources :users, only: [:index, :show] do  
