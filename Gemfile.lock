@@ -290,6 +290,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     ssrf_filter (1.1.2)
+    state_machine (1.2.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
@@ -353,6 +354,7 @@ DEPENDENCIES
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   sprockets-rails
+  state_machine (~> 1.2)
   stimulus-rails
   turbo-rails
   tzinfo-data
